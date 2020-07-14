@@ -24,7 +24,7 @@ export default class List extends Component {
     } 
     
     componentDidMount(){
-        this.getPosts("hot");
+        this.getPosts("hot"); //Iniciando com posts da categoria hot
     }
 
     getResponse = async category =>{
@@ -77,6 +77,7 @@ export default class List extends Component {
                     error:false
                 })
 
+                //Scroll para o ultimo elemento antes do loadMore
                 let elementId = document.getElementById(this.state.posts[this.state.postsToShow - 10].id)
                 window.scrollTo({top: elementId.offsetTop, left: 0, behavior: 'smooth' });
 
@@ -85,6 +86,15 @@ export default class List extends Component {
     )
 
     render() {
+        if (this.state.error){
+            return (
+                <Wrapper>
+                    <h2>
+                        Desculpe, mas aconteceu algum problema
+                    </h2>
+                </Wrapper>
+            )
+        }
         return(
             <Wrapper>
                 <ButtonList>
