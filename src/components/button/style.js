@@ -17,10 +17,6 @@ export const ButtonStyle = styled.button`
         opacity:.7;
     }
     
-    &:focus{
-        box-shadow: -1px -1px 5px 1px #000;
-    }
-
     & + &{
         @media screen and (min-width:768px){
             margin-left:5px;
@@ -30,6 +26,14 @@ export const ButtonStyle = styled.button`
         }
     }
     
+    &.fill{
+        width:100%;
+
+        section + &:last-child{
+            margin:10px 0;
+        }
+    }
+
     &.active{
         background-color:#ff5500;
     }

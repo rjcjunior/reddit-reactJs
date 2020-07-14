@@ -3,22 +3,23 @@ import { ListItemStyle } from './style';
 import PropTypes from 'prop-types'
 
 
-  
+const imgDefault = "https://static.thenounproject.com/png/340719-200.png";
 const ListItem = ({title, imgSrc, created, author, url }) => {
       return (
           <ListItemStyle>
-              <img className="listItem__img" src={imgSrc} alt="thumbnail" />
+              <img className="listItem__img" src={imgSrc === 'self' ||
+               imgSrc === 'default' ? imgDefault : imgSrc } alt="thumbnail" />
         
               <div className="listItem__content">
                 <h2 className="listItem__title">
                     {title}
                 </h2>
                 <p className="listItem__info">
-                    <span class="gray">
-                        enviado a {created} horas 
+                    <span className="gray">
+                        Enviado {created} 
                     </span>
                     por 
-                    <span class="orange"> 
+                    <span className="orange"> 
                         {author}
                     </span>
                 </p>

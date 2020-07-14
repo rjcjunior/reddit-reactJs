@@ -27,6 +27,12 @@ const GlobalStyle = createGlobalStyle`
         backface-visibility: hidden; 
     }
   
+    .app{
+        display:flex;
+        flex-flow:column;
+        width:100%;
+    }
+
     .bold{
         font-weight:bold;
     }
@@ -38,5 +44,30 @@ const GlobalStyle = createGlobalStyle`
     .gray{
         color: #666666;
     }
+        
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0)
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg)
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0)
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg)
+        }
+    }
+
 `;
 export default GlobalStyle;

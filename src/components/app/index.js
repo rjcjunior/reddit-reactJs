@@ -1,6 +1,7 @@
 import React from 'react';
 import GlobalStyle from './style'
 import Header from '../header';
+import List from '../list';
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <div className="app">
         <GlobalStyle />
         <Header />
+        <List></List>
       </div>  
     );
   
