@@ -8,7 +8,6 @@ function App() {
       <div className="app">
         <GlobalStyle />
         <Header />
-
       </div>  
     );
   

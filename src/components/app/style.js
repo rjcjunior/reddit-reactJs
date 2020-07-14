@@ -30,5 +30,13 @@ const GlobalStyle = createGlobalStyle`
     .bold{
         font-weight:bold;
     }
+
+    .orange{
+        color: #ff5500;
+    }
+
+    .gray{
+        color: #666666;
+    }
 `;
 export default GlobalStyle;
