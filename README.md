@@ -1,6 +1,6 @@
 # Reddit API with React
   
-  Acess on https://reddit-api-rjcjunior.herokuapp.com/
+  Acess on https://rjcjunior.github.io/reddit-reactJs/
     
   -> A React project which consume API of reddit (https://reddit.com), for generate posts informations.  
   
