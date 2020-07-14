@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 
 
 const imgDefault = "https://static.thenounproject.com/png/340719-200.png";
-const ListItem = ({title, imgSrc, created, author, url }) => {
+const ListItem = ({title, imgSrc, created, author, url, id }) => {
       return (
-          <ListItemStyle>
+          <ListItemStyle id={id}>
               <img className="listItem__img" src={imgSrc === 'self' ||
                imgSrc === 'default' ? imgDefault : imgSrc } alt="thumbnail" />
         
@@ -24,7 +24,7 @@ const ListItem = ({title, imgSrc, created, author, url }) => {
                     </span>
                 </p>
                 <a href={url} className="listItem__link">
-                    {url}
+                    Link
                 </a>
               </div>    
           </ListItemStyle>

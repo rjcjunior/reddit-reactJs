@@ -69,12 +69,17 @@ export default class List extends Component {
     loadMore = (postShow) => (
         this.getResponse(this.state.category).then(count => {
             count.fetchMore({amount: postShow + 10}).then(response => {
+                             
                 this.setState({
                     posts: response,
                     loading:false,
                     postsToShow: postShow + 10,
                     error:false
                 })
+
+                let elementId = document.getElementById(this.state.posts[this.state.postsToShow - 10].id)
+                window.scrollTo({top: elementId.offsetTop, left: 0, behavior: 'smooth' });
+
             })
         })
     )
@@ -83,13 +88,17 @@ export default class List extends Component {
         return(
             <Wrapper>
                 <ButtonList>
-                    <Button fn={() => this.getPosts("hot")} text="Hot"  />
-                    <Button fn={() => this.getPosts("new")} text="News"  />
-                    <Button fn={() => this.getPosts("rising")} text="Rising"  />
+                    <Button className={ this.state.category === "hot" ? "active" : "" }
+                     fn={() => this.getPosts("hot")} text="Hot"  />
+                    <Button className={ this.state.category === "new" ? "active" : "" }
+                    fn={() => this.getPosts("new")} text="News"  />
+                    <Button className={ this.state.category === "rising" ? "active" : "" }
+                    fn={() => this.getPosts("rising")} text="Rising"  />
                 </ButtonList>
+
                 <ListStyle >
                     {this.state.posts.map(post => (
-                        <ListItem key={post.id} title={post.title} created={moment.unix(post.created).fromNow()} author={post.author.name} url={post.url} imgSrc={post.thumbnail}/>
+                        <ListItem key={post.id} id={post.id} title={post.title} created={moment.unix(post.created).fromNow()} author={post.author.name} url={post.url} imgSrc={post.thumbnail}/>
                     ))}
                 </ListStyle>
 

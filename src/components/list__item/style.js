@@ -16,6 +16,10 @@ export const ListItemStyle = styled.div`
         background: #eeeeee;
     }
 
+    @media screen and (max-width:768px){
+        flex-flow:column;
+    }
+
     .listItem__img{
         width:64px;
         height:64px;
@@ -25,14 +29,31 @@ export const ListItemStyle = styled.div`
     }
 
     .listItem__content{
-        &:not(:first-child){
-            margin-left:10px;
+        max-width:100%;
+        
+        @media screen and (max-width:768px){
+            margin-top:10px;
+            width:100%
+        }
+
+        @media screen and (min-width:768px){        
+            &:not(:first-child){
+                margin-left:10px;
+            }
         }
     }
 
     .listItem__title{
         font-size: 24px;
         font-weight:bold;
+        
+        @media screen and (max-width:768px){
+            font-size:18px;
+
+            &:not(:last-child){
+                margin-bottom:3px;
+            }
+        }
     }
 
     .listItem__info{
@@ -51,5 +72,11 @@ export const ListItemStyle = styled.div`
     .listItem__link{
         color:#000;
         text-decoration: underline;
+        
+        @media screen and (max-width:768px){
+            &:not(:first-child){
+                margin-top:3px;
+            }
+        }
     }
 `;
