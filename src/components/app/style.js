@@ -26,6 +26,9 @@ const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         backface-visibility: hidden; 
     }
-    
+  
+    .bold{
+        font-weight:bold;
+    }
 `;
 export default GlobalStyle;
