@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/reddit-reactJs/static/js/main.6d74a9cd.chunk.js",
-    "main.js.map": "/reddit-reactJs/static/js/main.6d74a9cd.chunk.js.map",
+    "main.js": "/reddit-reactJs/static/js/main.e65b3b6a.chunk.js",
+    "main.js.map": "/reddit-reactJs/static/js/main.e65b3b6a.chunk.js.map",
     "runtime-main.js": "/reddit-reactJs/static/js/runtime-main.0c029412.js",
     "runtime-main.js.map": "/reddit-reactJs/static/js/runtime-main.0c029412.js.map",
     "static/js/2.4e4cedfd.chunk.js": "/reddit-reactJs/static/js/2.4e4cedfd.chunk.js",
     "static/js/2.4e4cedfd.chunk.js.map": "/reddit-reactJs/static/js/2.4e4cedfd.chunk.js.map",
     "index.html": "/reddit-reactJs/index.html",
-    "precache-manifest.a671fcacc195430f7e16241ba47dcf06.js": "/reddit-reactJs/precache-manifest.a671fcacc195430f7e16241ba47dcf06.js",
+    "precache-manifest.208a5ddaa27e371750614e8cfa6ca706.js": "/reddit-reactJs/precache-manifest.208a5ddaa27e371750614e8cfa6ca706.js",
     "service-worker.js": "/reddit-reactJs/service-worker.js",
     "static/js/2.4e4cedfd.chunk.js.LICENSE.txt": "/reddit-reactJs/static/js/2.4e4cedfd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0c029412.js",
     "static/js/2.4e4cedfd.chunk.js",
-    "static/js/main.6d74a9cd.chunk.js"
+    "static/js/main.e65b3b6a.chunk.js"
   ]
 }
